@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { addMonths, subMonths } from 'date-fns';
+import { addMonths, subMonths } from './utils/dateUtils';
 import CalendarGrid from './components/CalendarGrid';
-// import EventModal from './components/EventModal';
+import EventModal from './components/EventModal';
 import './App.css';
 
 const App = () => {

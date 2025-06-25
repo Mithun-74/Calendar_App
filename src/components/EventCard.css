@@ -1,0 +1,23 @@
+.event-card {
+  padding: 4px 8px;
+  margin: 2px 0;
+  border-radius: 4px;
+  font-size: 12px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.event-card:hover {
+  transform: translateY(-1px);
+}
+
+.event-title {
+  font-weight: 500;
+  margin-bottom: 1px;
+}
+
+.event-time {
+  font-size: 10px;
+  opacity: 0.9;
+}

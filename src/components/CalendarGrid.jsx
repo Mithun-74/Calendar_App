@@ -7,9 +7,10 @@ import {
   addDays,
   isSameMonth,
   isToday,
-  format
-} from 'date-fns';
-
+  formatDate
+} from '../utils/dateUtils';
+import EventCard from './EventCard';
+import './CalendarGrid.css';
 
 const CalendarGrid = ({ currentMonth, events }) => {
   const startDate = startOfWeek(startOfMonth(currentMonth));
@@ -20,7 +21,7 @@ const CalendarGrid = ({ currentMonth, events }) => {
 
   while (day <= endDate) {
     const days = Array(7).fill().map(() => {
-      const formattedDate = format(day, 'yyyy-MM-dd');
+      const formattedDate = formatDate(day, 'yyyy-MM-dd');
       const dayEvents = events.filter(ev => ev.date === formattedDate);
 
       const cell = (
@@ -28,7 +29,7 @@ const CalendarGrid = ({ currentMonth, events }) => {
           className={`calendar-cell ${!isSameMonth(day, currentMonth) ? 'outside-month' : ''} ${isToday(day) ? 'today' : ''}`}
           key={day}
         >
-          <div className="date-label">{format(day, 'd')}</div>
+          <div className="date-label">{formatDate(day, 'd')}</div>
           {dayEvents.map((ev, idx) => (
             <EventCard key={idx} event={ev} />
           ))}
