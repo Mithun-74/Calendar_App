@@ -1,4 +1,5 @@
-Calendar Event Manager
+****Calendar Event Manager****
+
 A simple yet powerful calendar application built with React for managing events and appointments. Perfect for keeping track of your schedule with an intuitive interface.
 Features
 
